@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import Hero from '@/assets/images/836127.png'
 import SnowFallComponent from '../SnowFall'
 import Link from 'next/link'
 
@@ -57,7 +56,7 @@ const ImageSketch = () => {
         <div>
             <div className={`w-[300px] h-[300px] relative left-[calc(12vw)] bottom-[calc(20vw)] md:w-[380px] md:h-[380px] md:left-[8vw] md:bottom-[14vh]`}>
                 <div className='w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-full absolute bottom-[-50px] left-[-50px] bg-secondary -z-10'></div>
-                <Image src={Hero}
+                <Image src={"/images/836127.png"}
                     alt="hilmi"
                     // width={800}
                     // height={800}

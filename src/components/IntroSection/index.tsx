@@ -1,5 +1,4 @@
 import React from 'react'
-import Hero from '@/assets/images/ishida (1).png'
 import Image from 'next/image'
 import { Button } from '../LandingSection'
 import dynamic from "next/dynamic";
@@ -21,7 +20,7 @@ const index = () => {
       <div className='flex-1 flex flex-col justify-center items-center'>
         <div className=' flex flex-row items-center justify-center '>
           <Image
-            src={Hero} alt="hilmi"
+            src="/images/ishida (1).png" alt="hilmi"
             width={200}
             height={200}
           />

@@ -2,10 +2,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Snowfall from 'react-snowfall'
 import { StaticImageData } from 'next/image';
-import cherry1 from '@/assets/images/cherries/cherry-blossom1.png'
-import cherry2 from '@/assets/images/cherries/cherry-blossom2.png'
-import cherry3 from '@/assets/images/cherries/cherry-blossom3.png'
-import cherry4 from '@/assets/images/cherries/cherry-blossom4.png'
+import cherry1 from '../../public/images/cherries/cherry-blossom1.png'
+import cherry2 from '../../public/images/cherries/cherry-blossom2.png'
+import cherry3 from '../../public/images/cherries/cherry-blossom3.png'
+import cherry4 from '../../public/images/cherries/cherry-blossom4.png'
 
 async function staticImageDataToCanvasImageSource(imageData: StaticImageData): Promise<CanvasImageSource | null> {
     const image = new Image();
