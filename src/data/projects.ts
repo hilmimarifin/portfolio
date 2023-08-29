@@ -1,5 +1,5 @@
-import geniouz from '../../public/images/geniouz.png'
-import quran from '../../public/images/quran.png'
+import geniouz from '../../public/images/projects/geniouz.png'
+import quran from '../../public/images/projects/quran.png'
 
 export const projects = [
   {
