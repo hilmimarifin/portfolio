@@ -17,12 +17,12 @@ const index = () => {
 
 const Description = () => {
     return (
-        <div className='text-center md:text-left md:ml-20 lg:ml-28'>
+        <div className='md:items-start md:text-left md:ml-20 lg:ml-28 flex flex-col justify-center items-center'>
             <div className='font-bold text-xl md:text-4xl'>
                 Hallo, {`I am`} Hilmi,
             </div>
             <div className=' md:text-xl'>
-                {`I'm a Full Stack Developer`}
+                {`your typical ordinary Software Engineer`}
             </div>
             <div className=' flex flex-row mt-2'>
                 <Link
