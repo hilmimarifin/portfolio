@@ -2,24 +2,28 @@ import Image from 'next/image'
 import React from 'react'
 import SnowFallComponent from '../SnowFall'
 import Link from 'next/link'
+import TogleDark from '../Togle'
 
 
 const index = () => {
     return (
-        <div className=' min-h-screen border-2 pt-[150px] flex flex-col items-center justify-center md:flex-row'>
-            <SnowFallComponent />
-            <ImageSketch />
-            <Description />
+        <div>
+            <TogleDark className={`text-center flex flex-row justify-end pr-4 mt-10`}/>
+            <div className=' min-h-screen  flex flex-col items-center justify-center md:flex-row'>
+                <SnowFallComponent />
+                <ImageSketch />
+                <Description />
+            </div>
+
         </div>
     )
 }
-
 
 const Description = () => {
     return (
         <div className='md:items-start md:text-left md:ml-20 lg:ml-28 flex flex-col justify-center items-center'>
             <div className='font-bold text-xl md:text-4xl'>
-                Hallo, {`I am`} Hilmi,
+                Hallo, {`I'm`} Hilmi,
             </div>
             <div className=' md:text-xl'>
                 {`your typical ordinary Software Engineer`}
@@ -46,7 +50,7 @@ const Description = () => {
 export const Button = ({ text, type }: { text: string, type?: 'primary' | null }) => {
     return (
         <div>
-            <button className={`border-2 border-primary rounded-md p-2 font-medium m-1 ${type === 'primary' && 'bg-primary text-white'} hover:scale-[0.95] transition ease-in-out duration-100`}>{text}</button>
+            <button className={`border-2 dark:border-white border-primary rounded-md p-2 font-medium m-1 ${type === 'primary' && 'bg-primary dark:bg-white dark:text-primary text-white'} hover:scale-[0.95] transition ease-in-out duration-100`}>{text}</button>
         </div>
     )
 }
@@ -55,7 +59,7 @@ const ImageSketch = () => {
     return (
         <div>
             <div className={`w-[300px] h-[300px] relative left-[calc(12vw)] bottom-[calc(20vw)] md:w-[380px] md:h-[380px] md:left-[8vw] md:bottom-[14vh]`}>
-                <div className='w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-full absolute bottom-[-50px] left-[-50px] bg-secondary -z-10'></div>
+                <div className='w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-full absolute bottom-[-50px] left-[-50px] bg-[#FFE569] -z-10'></div>
                 <Image src={"/images/836127.png"}
                     alt="hilmi"
                     // width={800}

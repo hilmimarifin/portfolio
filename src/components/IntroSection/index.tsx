@@ -51,7 +51,7 @@ const index = () => {
             </ul>
 
 
-            <p className='font-nunito'>I am a  full stack web developer with over a year of hands-on experience in the field, I have proven expertise in developing robust and scalable solutions that deliver exceptional user experiences.</p>
+            <p className='font-nunito'>I am a  full stack web developer with over a year of hands-on experience in the field, I have proven expertise in developing robust and scalable solutions that deliver exceptional user experiences.<br/>- ChatGPT</p>
             <div>
               <a target="_blank" href="https://drive.google.com/file/d/1hmZZJDLftGd9udnxtAhzkZdZerQ4hJ52/view?usp=sharing" rel="noopener noreferrer">
                 <Button text='Download CV' />

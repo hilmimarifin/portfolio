@@ -6,6 +6,7 @@ import cherry1 from '../../public/images/cherries/cherry-blossom1.png'
 import cherry2 from '../../public/images/cherries/cherry-blossom2.png'
 import cherry3 from '../../public/images/cherries/cherry-blossom3.png'
 import cherry4 from '../../public/images/cherries/cherry-blossom4.png'
+import { useTheme } from 'next-themes';
 
 async function staticImageDataToCanvasImageSource(imageData: StaticImageData): Promise<CanvasImageSource | null> {
     const image = new Image();
@@ -46,16 +47,39 @@ const CanvasWithImage = (image: StaticImageData) => {
 };
 
 const SnowFallComponent = () => {
-
+    const { theme } = useTheme()
     const images = [CanvasWithImage(cherry1), CanvasWithImage(cherry2), CanvasWithImage(cherry3), CanvasWithImage(cherry4)]
+    const snowfall = {
+        radius: [0.5, 3.0],
+        snowflakeCount: 200,
+        images: undefined,
+        speed: [2.0, 2.3],
+        wind: [2.5, 3.4]
+    }
+    const cherry = {
+        radius: [40, 50],
+        snowflakeCount: 30,
+        images: images as CanvasImageSource[],
+        speed: [1.0, 1.1],
+        wind: [-1.0, 1]
+    }
     return (
         <div>
-            <Snowfall radius={[40, 50]} snowflakeCount={30} images={images as CanvasImageSource[]} speed={[1.0, 1.1]} wind={[-1.0, 1]} style={{
-                position: 'fixed',
-                width: '100vw',
-                height: '100vh',
-                zIndex: -1
-            }} />
+            {theme === 'dark' ?
+                <Snowfall radius={[snowfall.radius[0], snowfall.radius[1]]} snowflakeCount={snowfall.snowflakeCount} images={snowfall.images} speed={[snowfall.speed[0], snowfall.speed[1]]} wind={[snowfall.wind[0], snowfall.wind[1]]} style={{
+                    position: 'fixed',
+                    width: '100vw',
+                    height: '100vh',
+                    zIndex: -1
+                }} />
+                :     
+                <Snowfall radius={[cherry.radius[0], cherry.radius[1]]} snowflakeCount={cherry.snowflakeCount} images={cherry.images} speed={[cherry.speed[0], cherry.speed[1]]} wind={[cherry.wind[0], cherry.wind[1]]} style={{
+                    position: 'fixed',
+                    width: '100vw',
+                    height: '100vh',
+                    zIndex: -1
+                }} />       
+            }
         </div>
     )
 }

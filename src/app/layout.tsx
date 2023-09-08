@@ -1,3 +1,4 @@
+import { Providers } from './Provider'
 import './globals.css'
 import { Inter, Nunito } from 'next/font/google'
 
@@ -5,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 const nunito = Nunito({
   variable: "--nunito-font",
-  subsets:  ['latin', 'latin-ext'],
+  subsets: ['latin', 'latin-ext'],
   weight: ['400', '700'],
   display: 'swap',
   fallback: ['Helvetica', 'sans-serif'],
@@ -22,9 +23,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${nunito.variable}`}>
+    <html lang="en" className={`scroll-smooth ${nunito.variable}`} suppressHydrationWarning>
       <body className={inter.className}>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   )
