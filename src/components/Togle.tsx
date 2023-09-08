@@ -1,22 +1,6 @@
 "use client"
 import React from 'react'
 
-// const TogleDark = () => {
-//     const { systemTheme, theme, setTheme } = useTheme();
-//     const currentTheme = theme === 'system' ? systemTheme : theme;
-
-//     return (
-//         <button
-//             onClick={() => theme == "dark"? setTheme('light'): setTheme("dark")}
-//             className='bg-gray-800 dark:bg-gray-50 hover:bg-gray-600 dark:hover:bg-gray-300 transition-all duration-100 text-white dark:text-gray-800 px-8 py-2 text-2xl md:text-4xl rounded-lg absolute bottom-32'>
-//             Toggle Mode
-//         </button>
-//     )
-// }
-
-
-// export default TogleDark;
-
 import { useState, useEffect } from 'react';
 import { useTheme } from "next-themes";
 
@@ -32,9 +16,9 @@ export default function TogleDark({ className }: { className: string }) {
             stroke="currentColor"
         >
             <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
             />
         </svg>
@@ -48,9 +32,9 @@ export default function TogleDark({ className }: { className: string }) {
             stroke="currentColor"
         >
             <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
             />
         </svg>

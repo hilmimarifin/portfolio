@@ -52,7 +52,7 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
                             <p className="text-gray-500 md:text-lg">{project.jobs.join(", ")}</p>
                             <ul className="flex flex-row">
                                 <MotionLi
-                                    key={project.title}
+                                    key={"github"}
                                     variants={{
                                         ...slideInVariants({ from: "right", delay: index * 0.05 }),
                                         ...scaleHoverVariants({ scale: 1.3 }),
@@ -72,7 +72,7 @@ export function ProjectItem({ project, index }: ProjectItemProps) {
                                     </a>
                                 </MotionLi>
                                 <MotionLi
-                                    key={project.title}
+                                    key={"web"}
                                     variants={{
                                         ...slideInVariants({ from: "right", delay: index * 0.05 }),
                                         ...scaleHoverVariants({ scale: 1.3 }),
