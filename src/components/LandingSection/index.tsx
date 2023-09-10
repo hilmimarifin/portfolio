@@ -21,9 +21,9 @@ const index = () => {
 
 const Description = () => {
     return (
-        <div className='md:items-start md:text-left md:ml-20 lg:ml-28 flex flex-col justify-center items-center'>
+        <div className='md:items-start md:text-left flex flex-col justify-center items-center md:ml-4'>
             <div className='font-bold text-xl md:text-4xl'>
-                Hallo, {`I'm`} Hilmi,
+                Hallo, {`I'm`} Hilmi
             </div>
             <div className=' md:text-xl'>
                 {`your typical ordinary Software Engineer`}
@@ -58,16 +58,16 @@ export const Button = ({ text, type }: { text: string, type?: 'primary' | null }
 const ImageSketch = () => {
     return (
         <div>
-            <div className={`w-[300px] h-[300px] relative left-[calc(12vw)] bottom-[calc(20vw)] md:w-[380px] md:h-[380px] md:left-[8vw] md:bottom-[14vh]`}>
-                <div className='w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-full absolute bottom-[-50px] left-[-50px] bg-[#FFE569] -z-10'></div>
+            <div className={`w-[300px] h-[390px] md:w-[380px] md:h-[480px] `}>
+                <div className='relative top-[50px] md:w-[380px] md:h-[380px] w-[300px] h-[300px] rounded-full  bg-[#FFE569] -z-10'></div>
                 <Image src={"/images/836127.png"}
                     alt="hilmi"
-                    // width={800}
-                    // height={800}
-                    fill
+                    width={800}
+                    height={800}
+                    // fill
                     sizes='(min-width: 768px) 1000px, 800px '
-                    objectFit="none"
-                    className=' z-10 absolute overflow-visible'
+                    objectFit="cover"
+                    className='relative top-[-300px] md:top-[-390px] left-1/4 z-10  object-none w-[150px] h-[390px] object-[-270px_-70px] md:w-[180px] md:h-[480px] md:object-[-340px_-90px]'
                 />
             </div>
         </div>
