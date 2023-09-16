@@ -8,7 +8,7 @@ import TogleDark from '../Togle'
 const index = () => {
     return (
         <div>
-            <TogleDark className={`text-center flex flex-row justify-end pr-4 mt-10`}/>
+            <TogleDark className={`text-center flex flex-row justify-end pr-4 mt-10`} />
             <div className=' min-h-screen  flex flex-col items-center justify-center md:flex-row'>
                 <SnowFallComponent />
                 <ImageSketch />
@@ -59,17 +59,27 @@ const ImageSketch = () => {
     return (
         <div>
             <div className={`w-[300px] h-[390px] md:w-[380px] md:h-[480px] `}>
-                <div className='relative top-[50px] md:w-[380px] md:h-[380px] w-[300px] h-[300px] rounded-full  bg-[#FFE569] dark:grayscale dark:bg-[#4f677f] -z-10'></div>
-                <Image src={"/images/836127.png"}
-                    alt="hilmi"
-                    width={800}
-                    height={800}
-                    // fill
-                    sizes='(min-width: 768px) 1000px, 800px '
-                    objectFit="cover"
-                    className='relative top-[-300px] md:top-[-390px] left-1/4 z-10  object-none dark:grayscale w-[150px] h-[390px] object-[-270px_-70px] md:w-[180px] md:h-[480px] md:object-[-340px_-90px]'
-                />
+                <div className='relative top-[50px] md:w-[380px] md:h-[380px] w-[300px] h-[300px] rounded-full  bg-[#FFE569]  dark:bg-gray-600 '>
+                    
+                    <Image src={"/images/giphy.webp"}
+                        alt="eyes"
+                        width={70}
+                        height={70}
+                        sizes='(min-width: 768px) 70px, 50px '
+                        className='absolute z-20 object-contain w-[50px] h-[50px] md:w-[80px] md:h-[80px] left-[48%] -top-[3%] md:left-[45%] md:-top-[7%] hidden dark:block'
+                    />
+
+                    <Image src={"/images/836127.png"}
+                        alt="hilmi"
+                        width={800}
+                        height={800}
+                        sizes='(min-width: 768px) 1000px, 800px '
+                        className='absolute z-10 -top-[15%] left-1/4  object-none dark:grayscale w-[150px] h-[390px] object-[-270px_-70px] md:w-[180px] md:h-[480px] md:object-[-340px_-90px]'
+                    />
+
+                </div>
             </div>
+
         </div>
     )
 }
