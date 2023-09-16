@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 
 export default function TogleDark({ className }: { className: string }) {
     const { theme, setTheme } = useTheme();
-    const [isDarkmode, setIsDarkmode] = useState(false);
+    const [isDarkmode, setIsDarkmode] = useState(theme === 'dark' ? true : false);
 
     const darkIcon = (
         <svg

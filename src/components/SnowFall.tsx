@@ -51,35 +51,35 @@ const SnowFallComponent = () => {
     const images = [CanvasWithImage(cherry1), CanvasWithImage(cherry2), CanvasWithImage(cherry3), CanvasWithImage(cherry4)]
     const snowfall = {
         radius: [0.5, 3.0],
-        snowflakeCount: 200,
+        snowflakeCount: 50,
         images: undefined,
-        speed: [2.0, 2.3],
-        wind: [2.5, 3.4]
+        speed: [4.0, 4.3],
+        wind: [3.5, 4.4]
     }
     const cherry = {
         radius: [40, 50],
-        snowflakeCount: 30,
+        snowflakeCount: theme === 'dark' ? snowfall.snowflakeCount : 30,
         images: images as CanvasImageSource[],
-        speed: [1.0, 1.1],
-        wind: [-1.0, 1]
+        speed: theme === 'dark' ? snowfall.speed : [1.0, 1.1],
+        wind: theme === 'dark' ? snowfall.wind :[-1.0, 1]
     }
     return (
         <div>
-            {theme === 'dark' ?
-                <Snowfall radius={[snowfall.radius[0], snowfall.radius[1]]} snowflakeCount={snowfall.snowflakeCount} images={snowfall.images} speed={[snowfall.speed[0], snowfall.speed[1]]} wind={[snowfall.wind[0], snowfall.wind[1]]} style={{
+            {/* {theme === 'dark' ? */}
+                {/* <Snowfall radius={[snowfall.radius[0], snowfall.radius[1]]} snowflakeCount={snowfall.snowflakeCount} images={snowfall.images} speed={[snowfall.speed[0], snowfall.speed[1]]} wind={[snowfall.wind[0], snowfall.wind[1]]} style={{
                     position: 'fixed',
                     width: '100vw',
                     height: '100vh',
                     zIndex: -1
                 }} />
-                :     
+                :      */}
                 <Snowfall radius={[cherry.radius[0], cherry.radius[1]]} snowflakeCount={cherry.snowflakeCount} images={cherry.images} speed={[cherry.speed[0], cherry.speed[1]]} wind={[cherry.wind[0], cherry.wind[1]]} style={{
                     position: 'fixed',
                     width: '100vw',
                     height: '100vh',
                     zIndex: -1
                 }} />       
-            }
+            {/* } */}
         </div>
     )
 }
