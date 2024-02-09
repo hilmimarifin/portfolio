@@ -16,7 +16,7 @@ const SkillSection = dynamic(() => import("./SkillSection"), {
 
 const index = () => {
   return (
-    <div className='min-h-screen bg-secondary pt-20 flex flex-col items-center' id="aboutme">
+    <div className='min-h-screen bg-secondary pt-20 flex flex-col items-cente z-10' id="aboutme">
       <div className='flex-1 flex flex-col justify-center items-center'>
         <div className=' flex flex-row items-center justify-center '>
           <Image

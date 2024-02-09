@@ -19,6 +19,17 @@ module.exports = {
       colors: {
         primary: '#482C29',
         secondary: '#FFE569'
+      },
+      animation: {
+        "ping-fast": 'beat 0.5s cubic-bezier(0, 0, 0.2, 1) infinite;'
+      },
+      keyframes: {
+        beat: {
+          '75%, 100%': {
+            transform: 'scale(1.25)',
+            opacity: 0,
+          },
+        },
       }
     },
   },

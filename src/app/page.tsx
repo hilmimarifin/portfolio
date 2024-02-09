@@ -5,7 +5,7 @@ import ProjectSection from '@/components/ProjectSection'
 export default function Home() {
   return (
     <main>
-      <div className='font-nunito'>
+      <div className='font-nunito flex flex-col'>
         <LandingSection />
         <IntroSection />
         <ProjectSection className=' min-h-screen pt-10' />
