@@ -1,10 +1,12 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import SnowFallComponent from '../SnowFall'
 import Link from 'next/link'
 import TogleDark from '../Togle'
 import { MotionDiv } from '../motion'
 import { slideInVariants } from '@/framer-motion/slide-in'
+import Button from '../Button'
 
 
 const index = () => {
@@ -31,6 +33,10 @@ const index = () => {
 }
 
 const Description = () => {
+    function scrollToDiv(elementId: string) {
+        const div = document.getElementById(elementId)
+        div?.scrollIntoView({ behavior: 'smooth' });
+    }    
     return (
         <MotionDiv
             variants={slideInVariants({ from: "right", duration: 1 })}
@@ -46,18 +52,18 @@ const Description = () => {
                     {`your typical ordinary Software Engineer`}
                 </div>
                 <div className=' flex flex-row mt-2'>
-                    <Link
+                    {/* <Link
                         href={`/#aboutme`}
                         scroll={false}
-                    >
-                        <Button text='About me' type='primary' />
-                    </Link>
-                    <Link
+                    > */}
+                    <Button text='About me' variant="primary" onClick={() => scrollToDiv("aboutme")} />
+                    {/* </Link> */}
+                    {/* <Link
                         href={`/#projects`}
                         scroll={false}
-                    >
-                        <Button text='Portfolio' />
-                    </Link>
+                    > */}
+                    <Button text='Portfolio' onClick={() => scrollToDiv("projects")} />
+                    {/* </Link> */}
                 </div>
 
             </div>
@@ -67,13 +73,6 @@ const Description = () => {
     )
 }
 
-export const Button = ({ text, type }: { text: string, type?: 'primary' | null }) => {
-    return (
-        <div>
-            <button className={`border-2 dark:border-white border-primary rounded-md p-2 font-medium m-1 ${type === 'primary' && 'bg-primary dark:bg-white dark:text-primary text-white'} hover:scale-[0.95] transition ease-in-out duration-100`}>{text}</button>
-        </div>
-    )
-}
 
 const ImageSketch = () => {
     return (

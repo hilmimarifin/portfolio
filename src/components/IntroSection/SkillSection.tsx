@@ -48,22 +48,22 @@ const skills = [
 ];
 
 export default function SkillSection() {
+    
     return (
-        <section className="mt-20">
+        <section className=" w-full md:w-auto">
             <MotionDiv
                 variants={slideInVariants()}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-64px" }}
             >
-            </MotionDiv>
-                <div className="mt-8 [&>swiper-container>swiper-slide]:w-auto">
+                <div className="mt-8 [&>swiper-container>swiper-slide]:w-auto ">
                     <swiper-container
                         slides-per-view="auto"
                         grab-cursor
                         free-mode
                         space-between={48}
-                        class="p-4 -m-4"
+                        class={`pt-3 `}
                     >
                         {skills.map((skill, index) => (
                             <SwiperSlide key={skill.title} title={skill.title} index={index}>
@@ -75,6 +75,8 @@ export default function SkillSection() {
                         ))}
                     </swiper-container>
                 </div>
+
+            </MotionDiv>
         </section>
     );
 }
