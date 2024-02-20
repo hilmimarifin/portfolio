@@ -11,7 +11,7 @@ export default function Home() {
       <div className='flex flex-col'>
         <LandingSection />
         <IntroSection />
-        <ProjectSection className=' min-h-screen pt-10' />
+        <ProjectSection className=' min-h-screen pt-10 mb-10' />
         <ScrollToTop />
       </div>
     </main >

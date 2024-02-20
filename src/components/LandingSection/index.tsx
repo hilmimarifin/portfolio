@@ -88,13 +88,13 @@ const ImageSketch = () => {
                         <div className='absolute md:w-[380px] md:h-[380px] w-[300px] h-[300px] rounded-full  bg-[#FFE569]  dark:bg-gray-600 dark:animate-ping-fast -z-10' />
                         <div className='absolute md:w-[380px] md:h-[380px] w-[300px] h-[300px] rounded-full dark:bg-gray-600 -z-10' />
 
-                        <Image src={"/images/giphy.webp"}
+                        {/* <Image src={"/images/giphy.webp"}
                             alt="eyes"
                             width={70}
                             height={70}
                             sizes='(min-width: 768px) 70px, 50px '
                             className='absolute z-20 object-contain w-[50px] h-[50px] md:w-[80px] md:h-[80px] left-[48%] -top-[3%] md:left-[45%] md:-top-[7%] hidden dark:block'
-                        />
+                        /> */}
 
                         <Image src={"/images/836127.png"}
                             alt="hilmi"
